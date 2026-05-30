@@ -1,45 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Layout from "../layouts/Layout.astro";
 import Header from "../components/layout/Header.astro";
+import HeroSection from "../components/sections/HeroSection.astro";
 ---
 
 <Layout>
   <Header />
+
   <main class="min-h-screen bg-[var(--color-cream)] text-[var(--color-deep-blue)]">
-    <section class="flex min-h-screen items-center justify-center px-6 text-center">
-      <div class="max-w-3xl">
-        <p class="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-[var(--color-ocean)]">
-          Caribe Mid
-        </p>
-
-        <h1 class="text-5xl font-bold tracking-tight md:text-7xl">
-          No reserves un servicio.
-          <span class="block text-[var(--color-coral)]">
-            Reserva un momento.
-          </span>
-        </h1>
-
-        <p class="mx-auto mt-6 max-w-2xl text-lg text-slate-700 md:text-xl">
-          Creamos experiencias memorables en el Caribe que empiezan desde el primer clic.
-        </p>
-
-        <div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-          <a
-            href="#reservar"
-            class="rounded-full bg-[var(--color-coral)] px-8 py-4 font-semibold text-white shadow-lg transition hover:scale-105"
-          >
-            Reservar experiencia
-          </a>
-
-          <a
-            href="#experiencias"
-            class="rounded-full border border-[var(--color-ocean)] px-8 py-4 font-semibold text-[var(--color-ocean)] transition hover:bg-[var(--color-ocean)] hover:text-white"
-          >
-            Explorar momentos
-          </a>
-        </div>
-      </div>
-    </section>
+    <HeroSection />
   </main>
 </Layout>

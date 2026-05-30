@@ -1,0 +1,109 @@
+---
+const baseUrl = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+---
+
+<section class="relative min-h-screen overflow-hidden bg-[var(--color-cream)] px-6 pt-36">
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute left-[-10%] top-[-10%] h-96 w-96 rounded-full bg-[var(--color-coral)]/30 blur-3xl"></div>
+    <div class="absolute right-[-8%] top-[15%] h-[32rem] w-[32rem] rounded-full bg-[var(--color-sky)]/30 blur-3xl"></div>
+    <div class="absolute bottom-[-20%] left-[20%] h-[28rem] w-[28rem] rounded-full bg-[var(--color-flamingo)]/30 blur-3xl"></div>
+  </div>
+
+  <div class="mx-auto grid min-h-[calc(100vh-9rem)] max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+    <div class="relative z-10">
+      <p class="mb-5 inline-flex rounded-full border border-[var(--color-ocean)]/20 bg-white/70 px-5 py-2 text-sm font-bold uppercase tracking-[0.28em] text-[var(--color-ocean)] shadow-sm backdrop-blur">
+        Caribe Mid
+      </p>
+
+      <h1 class="max-w-4xl text-5xl font-black leading-[0.95] tracking-tight text-[var(--color-deep-blue)] md:text-7xl lg:text-8xl">
+        No reserves un servicio.
+        <span class="mt-2 block bg-gradient-to-r from-[var(--color-coral)] via-[var(--color-flamingo)] to-[var(--color-ocean)] bg-clip-text text-transparent">
+          Reserva un momento.
+        </span>
+      </h1>
+
+      <p class="mt-8 max-w-2xl text-lg leading-8 text-slate-700 md:text-xl">
+        Diseñamos experiencias en el Caribe que empiezan desde el primer clic:
+        momentos para celebrar, sorprender, reconectar y vivir algo que se recuerde.
+      </p>
+
+      <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+        <a
+          href="#reservar"
+          class="group rounded-full bg-[var(--color-coral)] px-8 py-4 text-center text-base font-bold text-white shadow-xl shadow-orange-900/10 transition hover:-translate-y-1 hover:shadow-2xl"
+        >
+          Reservar experiencia
+          <span class="inline-block transition group-hover:translate-x-1">→</span>
+        </a>
+
+        <a
+          href="#experiencias"
+          class="rounded-full border border-[var(--color-ocean)]/30 bg-white/70 px-8 py-4 text-center text-base font-bold text-[var(--color-ocean)] shadow-sm backdrop-blur transition hover:-translate-y-1 hover:bg-[var(--color-ocean)] hover:text-white"
+        >
+          Explorar momentos
+        </a>
+      </div>
+
+      <div class="mt-12 grid max-w-2xl grid-cols-3 gap-4">
+        <div class="rounded-3xl bg-white/70 p-4 shadow-sm backdrop-blur">
+          <p class="text-2xl font-black text-[var(--color-coral)]">01</p>
+          <p class="mt-1 text-sm font-semibold text-slate-600">Elige tu experiencia</p>
+        </div>
+
+        <div class="rounded-3xl bg-white/70 p-4 shadow-sm backdrop-blur">
+          <p class="text-2xl font-black text-[var(--color-ocean)]">02</p>
+          <p class="mt-1 text-sm font-semibold text-slate-600">Solicita por WhatsApp</p>
+        </div>
+
+        <div class="rounded-3xl bg-white/70 p-4 shadow-sm backdrop-blur">
+          <p class="text-2xl font-black text-[var(--color-flamingo)]">03</p>
+          <p class="mt-1 text-sm font-semibold text-slate-600">Confirma tu momento</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative mx-auto flex w-full max-w-xl items-center justify-center">
+      <div class="absolute h-[26rem] w-[26rem] rounded-full bg-gradient-to-br from-[var(--color-coral)]/30 via-white/40 to-[var(--color-ocean)]/30 blur-2xl"></div>
+
+      <div class="relative w-full rounded-[2.5rem] border border-white/70 bg-white/65 p-6 shadow-2xl shadow-sky-950/10 backdrop-blur-xl">
+        <div class="rounded-[2rem] bg-gradient-to-br from-[var(--color-ocean)] via-[var(--color-sky)] to-[var(--color-coral)] p-1">
+          <div class="rounded-[1.8rem] bg-white/90 p-8">
+            <img
+              src={`${baseUrl}images/logo/logo-caribemid-large.webp`}
+              alt="Caribe Mid Viajes & planner"
+              class="mx-auto w-full max-w-md"
+              width="640"
+              height="213"
+            />
+
+            <div class="mt-8 rounded-3xl bg-[var(--color-cream)] p-5">
+              <p class="text-sm font-bold uppercase tracking-[0.25em] text-[var(--color-ocean)]">
+                Experiencia destacada
+              </p>
+
+              <h2 class="mt-3 text-3xl font-black text-[var(--color-deep-blue)]">
+                Tu plan empieza aquí
+              </h2>
+
+              <p class="mt-3 text-sm leading-6 text-slate-600">
+                Un recorrido visual, emocional y directo hacia la reservación.
+                Sin páginas aburridas. Sin pasos innecesarios.
+              </p>
+
+              <a
+                href="#reservar"
+                class="mt-6 inline-flex rounded-full bg-[var(--color-ocean)] px-6 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-[var(--color-wave)]"
+              >
+                Quiero reservar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/80 to-transparent"></div>
+</section>
