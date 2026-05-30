@@ -581,3 +581,118 @@ body {
     transform: none !important;
   }
 }
+
+.bento-card {
+  isolation: isolate;
+}
+
+.bento-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(255, 255, 255, 0.55),
+      transparent 28%
+    );
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  pointer-events: none;
+}
+
+.bento-card:hover::before {
+  opacity: 1;
+}
+
+.bento-light {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.85), transparent 45%),
+    radial-gradient(circle at 25% 20%, rgba(255, 255, 255, 0.5), transparent 35%);
+}
+
+.bento-shape,
+.bento-shape-secondary {
+  filter: blur(2px);
+  opacity: 0.7;
+}
+
+.bento-coral {
+  background:
+    linear-gradient(135deg, rgba(250, 250, 248, 0.78), rgba(240, 164, 114, 0.2)),
+    rgba(255, 255, 255, 0.58);
+}
+
+.bento-coral .bento-shape {
+  background: rgba(240, 164, 114, 0.55);
+}
+
+.bento-coral .bento-shape-secondary {
+  background: rgba(33, 121, 182, 0.2);
+}
+
+.bento-pink {
+  background:
+    linear-gradient(135deg, rgba(250, 250, 248, 0.78), rgba(240, 174, 163, 0.28)),
+    rgba(255, 255, 255, 0.58);
+}
+
+.bento-pink .bento-shape {
+  background: rgba(240, 174, 163, 0.6);
+}
+
+.bento-pink .bento-shape-secondary {
+  background: rgba(240, 164, 114, 0.25);
+}
+
+.bento-blue {
+  background:
+    linear-gradient(135deg, rgba(250, 250, 248, 0.78), rgba(33, 121, 182, 0.22)),
+    rgba(255, 255, 255, 0.58);
+}
+
+.bento-blue .bento-shape {
+  background: rgba(33, 121, 182, 0.42);
+}
+
+.bento-blue .bento-shape-secondary {
+  background: rgba(90, 153, 193, 0.35);
+}
+
+.bento-orange {
+  background:
+    linear-gradient(135deg, rgba(250, 250, 248, 0.78), rgba(237, 214, 201, 0.62)),
+    rgba(255, 255, 255, 0.58);
+}
+
+.bento-orange .bento-shape {
+  background: rgba(240, 164, 114, 0.5);
+}
+
+.bento-orange .bento-shape-secondary {
+  background: rgba(240, 174, 163, 0.35);
+}
+
+.bento-sky {
+  background:
+    linear-gradient(135deg, rgba(250, 250, 248, 0.78), rgba(90, 153, 193, 0.25)),
+    rgba(255, 255, 255, 0.58);
+}
+
+.bento-sky .bento-shape {
+  background: rgba(90, 153, 193, 0.45);
+}
+
+.bento-sky .bento-shape-secondary {
+  background: rgba(240, 164, 114, 0.25);
+}
+
+@media (hover: hover) {
+  .bento-card:hover {
+    transform:
+      translateY(-10px)
+      perspective(900px)
+      rotateX(calc(var(--parallax-y, 0) * -2deg))
+      rotateY(calc(var(--parallax-x, 0) * 2deg));
+  }
+}

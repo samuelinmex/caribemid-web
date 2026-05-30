@@ -1,0 +1,136 @@
+---
+const phoneNumber = "5210000000000";
+
+const moments = [
+  {
+    title: "Escapada de playa",
+    description:
+      "Para quienes quieren arena, mar, brisa y una experiencia ligera para desconectarse.",
+    label: "Playa",
+    accent: "coral",
+    size: "lg:col-span-2 lg:row-span-2",
+    message:
+      "Hola Caribe Mid, quiero información sobre una escapada de playa. Me gustaría conocer opciones, disponibilidad y precios.",
+  },
+  {
+    title: "Momento romántico",
+    description:
+      "Ideal para aniversarios, propuestas, sorpresas o una cita especial frente al Caribe.",
+    label: "Parejas",
+    accent: "pink",
+    size: "",
+    message:
+      "Hola Caribe Mid, quiero reservar una experiencia romántica. ¿Me pueden compartir opciones?",
+  },
+  {
+    title: "Cenote & calma",
+    description:
+      "Una experiencia visual inspirada en agua cristalina, descanso y conexión con la naturaleza.",
+    label: "Cenote",
+    accent: "blue",
+    size: "",
+    message:
+      "Hola Caribe Mid, me interesa una experiencia relacionada con cenotes y naturaleza. ¿Qué opciones tienen?",
+  },
+  {
+    title: "Celebración especial",
+    description:
+      "Cumpleaños, aniversarios, pedidas, reuniones o momentos que merecen prepararse con detalle.",
+    label: "Celebrar",
+    accent: "orange",
+    size: "lg:col-span-2",
+    message:
+      "Hola Caribe Mid, quiero organizar una celebración especial. ¿Me pueden ayudar con opciones y disponibilidad?",
+  },
+  {
+    title: "Plan familiar",
+    description:
+      "Una experiencia cómoda, bonita y memorable para compartir en familia o con amigos.",
+    label: "Familia",
+    accent: "sky",
+    size: "",
+    message:
+      "Hola Caribe Mid, busco una experiencia familiar o grupal. ¿Qué opciones recomiendan?",
+  },
+];
+
+function getWhatsappUrl(message: string) {
+  return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+}
+---
+
+<section id="momentos" class="relative overflow-hidden bg-[var(--color-cream)] px-6 py-28">
+  <div class="absolute inset-0 opacity-80">
+    <div class="absolute left-[-8rem] top-20 h-96 w-96 rounded-full bg-[var(--color-coral)]/20 blur-3xl"></div>
+    <div class="absolute right-[-10rem] bottom-20 h-[30rem] w-[30rem] rounded-full bg-[var(--color-ocean)]/20 blur-3xl"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-7xl">
+    <div class="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+      <div class="max-w-3xl">
+        <p class="text-sm font-black uppercase tracking-[0.3em] text-[var(--color-ocean)]">
+          Momentos interactivos
+        </p>
+
+        <h2 class="mt-4 text-4xl font-black tracking-tight text-[var(--color-deep-blue)] md:text-6xl">
+          Haz clic en el momento
+          <span class="block text-[var(--color-coral)]">
+            que quieres vivir.
+          </span>
+        </h2>
+
+        <p class="mt-6 text-lg leading-8 text-slate-600">
+          Cada tarjeta inicia una conversación distinta por WhatsApp. Así el usuario
+          no solo mira el sitio: interactúa, elige y avanza hacia la reserva.
+        </p>
+      </div>
+
+      <a
+        href="#reservar"
+        class="inline-flex rounded-full bg-[var(--color-deep-blue)] px-7 py-4 text-sm font-black text-white shadow-xl transition hover:-translate-y-1 hover:bg-[var(--color-ocean)]"
+      >
+        Ir a reservar →
+      </a>
+    </div>
+
+    <div class="mt-14 grid auto-rows-[18rem] gap-5 lg:grid-cols-4">
+      {moments.map((moment, index) => (
+        <a
+          href={getWhatsappUrl(moment.message)}
+          target="_blank"
+          rel="noopener noreferrer"
+          class={`bento-card bento-${moment.accent} group relative overflow-hidden rounded-[2.25rem] border border-white/70 bg-white/60 p-6 shadow-xl shadow-sky-950/5 backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:shadow-2xl ${moment.size}`}
+          aria-label={`Consultar por WhatsApp: ${moment.title}`}
+        >
+          <div class="bento-light absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100"></div>
+
+          <div class="absolute right-5 top-5 z-10 rounded-full border border-white/70 bg-white/60 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[var(--color-deep-blue)] backdrop-blur">
+            {moment.label}
+          </div>
+
+          <div class="bento-shape absolute -right-16 -top-16 h-52 w-52 rounded-full transition duration-700 group-hover:scale-125"></div>
+          <div class="bento-shape-secondary absolute -bottom-20 left-8 h-44 w-44 rounded-full transition duration-700 group-hover:scale-125"></div>
+
+          <div class="relative z-10 flex h-full flex-col justify-end">
+            <p class="mb-4 text-6xl font-black text-white/50">
+              0{index + 1}
+            </p>
+
+            <h3 class="text-3xl font-black tracking-tight text-[var(--color-deep-blue)]">
+              {moment.title}
+            </h3>
+
+            <p class="mt-4 max-w-xl text-sm leading-6 text-slate-700">
+              {moment.description}
+            </p>
+
+            <div class="mt-6 inline-flex w-fit items-center rounded-full bg-white/75 px-5 py-3 text-sm font-black text-[var(--color-ocean)] shadow-sm transition group-hover:bg-[var(--color-deep-blue)] group-hover:text-white">
+              Consultar por WhatsApp
+              <span class="ml-2 transition group-hover:translate-x-1">→</span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
