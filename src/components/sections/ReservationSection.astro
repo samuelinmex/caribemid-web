@@ -1,0 +1,89 @@
+---
+const phoneNumber = "5210000000000";
+
+const whatsappMessage =
+  "Hola Caribe Mid, quiero reservar una experiencia. Me gustaría recibir información sobre disponibilidad, opciones y anticipo.";
+
+const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+---
+
+<section id="reservar" class="relative overflow-hidden bg-[var(--color-deep-blue)] px-6 py-28 text-white">
+  <div class="absolute inset-0 opacity-20">
+    <div class="absolute left-[-10%] top-[-20%] h-96 w-96 rounded-full bg-[var(--color-coral)] blur-3xl"></div>
+    <div class="absolute bottom-[-20%] right-[-10%] h-[30rem] w-[30rem] rounded-full bg-[var(--color-sky)] blur-3xl"></div>
+  </div>
+
+  <div class="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+    <div>
+      <p class="text-sm font-black uppercase tracking-[0.3em] text-[var(--color-coral)]">
+        Reserva fácil
+      </p>
+
+      <h2 class="mt-4 text-4xl font-black tracking-tight md:text-6xl">
+        Tu experiencia empieza con un mensaje.
+      </h2>
+
+      <p class="mt-6 text-lg leading-8 text-white/75">
+        Sin formularios largos ni procesos fríos. Elige el tipo de momento que quieres vivir
+        y continúa la conversación directamente por WhatsApp.
+      </p>
+    </div>
+
+    <div class="rounded-[2rem] border border-white/15 bg-white/10 p-6 shadow-2xl backdrop-blur-xl md:p-8">
+      <div class="grid gap-4 md:grid-cols-2">
+        <div class="rounded-3xl bg-white/10 p-5">
+          <p class="text-sm font-bold uppercase tracking-[0.22em] text-[var(--color-coral)]">
+            Paso 1
+          </p>
+          <h3 class="mt-3 text-2xl font-black">Cuéntanos tu idea</h3>
+          <p class="mt-3 text-sm leading-6 text-white/70">
+            Celebración, sorpresa, escapada, pareja, familia o grupo.
+          </p>
+        </div>
+
+        <div class="rounded-3xl bg-white/10 p-5">
+          <p class="text-sm font-bold uppercase tracking-[0.22em] text-[var(--color-coral)]">
+            Paso 2
+          </p>
+          <h3 class="mt-3 text-2xl font-black">Confirmamos detalles</h3>
+          <p class="mt-3 text-sm leading-6 text-white/70">
+            Fecha, horario, disponibilidad, personas y recomendaciones.
+          </p>
+        </div>
+
+        <div class="rounded-3xl bg-white/10 p-5">
+          <p class="text-sm font-bold uppercase tracking-[0.22em] text-[var(--color-coral)]">
+            Paso 3
+          </p>
+          <h3 class="mt-3 text-2xl font-black">Apartas tu momento</h3>
+          <p class="mt-3 text-sm leading-6 text-white/70">
+            Podrás confirmar con anticipo o pago en línea según la experiencia.
+          </p>
+        </div>
+
+        <div class="rounded-3xl bg-[var(--color-coral)] p-5 text-white">
+          <p class="text-sm font-bold uppercase tracking-[0.22em] text-white/80">
+            WhatsApp
+          </p>
+          <h3 class="mt-3 text-2xl font-black">Atención directa</h3>
+          <p class="mt-3 text-sm leading-6 text-white/80">
+            Inicia tu solicitud con un mensaje ya preparado.
+          </p>
+        </div>
+      </div>
+
+      <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-8 inline-flex w-full items-center justify-center rounded-full bg-white px-8 py-4 text-center text-base font-black text-[var(--color-deep-blue)] shadow-xl transition hover:-translate-y-1 hover:bg-[var(--color-cream)]"
+      >
+        Reservar por WhatsApp →
+      </a>
+
+      <p class="mt-4 text-center text-xs leading-5 text-white/55">
+        Más adelante podemos conectar pagos con Mercado Pago, Stripe o links de anticipo.
+      </p>
+    </div>
+  </div>
+</section>
