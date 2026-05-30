@@ -4,107 +4,157 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/")
   : `${import.meta.env.BASE_URL}/`;
 ---
 
-<section class="relative min-h-screen overflow-hidden bg-[var(--color-cream)] px-6 pt-36">
-  <div class="absolute inset-0 -z-10">
-    <div class="absolute left-[-10%] top-[-10%] h-96 w-96 rounded-full bg-[var(--color-coral)]/30 blur-3xl"></div>
-    <div class="absolute right-[-8%] top-[15%] h-[32rem] w-[32rem] rounded-full bg-[var(--color-sky)]/30 blur-3xl"></div>
-    <div class="absolute bottom-[-20%] left-[20%] h-[28rem] w-[28rem] rounded-full bg-[var(--color-flamingo)]/30 blur-3xl"></div>
-  </div>
+<section class="premium-hero relative min-h-screen overflow-hidden bg-[var(--color-cream)] px-6 pt-36">
+  <div class="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_var(--mouse-x,50%)_var(--mouse-y,50%),rgba(240,164,114,0.22),transparent_28%),linear-gradient(135deg,#fafaf8_0%,#f8eee8_45%,#edf7fb_100%)]"></div>
+
+  <div class="premium-mesh absolute inset-0 -z-10"></div>
+
+  <div class="premium-orb premium-orb-1"></div>
+  <div class="premium-orb premium-orb-2"></div>
+  <div class="premium-orb premium-orb-3"></div>
+
+  <svg
+  class="coast-lines absolute left-0 top-24 hidden h-[34rem] w-[34rem] opacity-25 lg:block"
+  viewBox="0 0 500 500"
+  fill="none"
+  aria-hidden="true"
+>
+  <circle cx="190" cy="190" r="88" stroke="#2179B6" stroke-width="3" />
+  <circle cx="190" cy="190" r="54" stroke="#5A99C1" stroke-width="3" />
+  <path
+    d="M72 330C128 300 178 300 236 330C296 362 354 362 430 318"
+    stroke="#2179B6"
+    stroke-width="5"
+    stroke-linecap="round"
+  />
+  <path
+    d="M82 370C138 340 188 340 246 370C306 402 364 402 440 358"
+    stroke="#F0A472"
+    stroke-width="5"
+    stroke-linecap="round"
+  />
+  <path
+    d="M118 238C160 218 202 218 244 238C286 258 328 258 370 232"
+    stroke="#F0AEA3"
+    stroke-width="4"
+    stroke-linecap="round"
+  />
+  <path
+    d="M312 130C340 104 382 100 414 126C382 126 356 142 338 170"
+    stroke="#2179B6"
+    stroke-width="4"
+    stroke-linecap="round"
+  />
+  <path
+    d="M328 170C364 158 402 170 426 202C390 190 360 196 336 220"
+    stroke="#0B78AD"
+    stroke-width="4"
+    stroke-linecap="round"
+  />
+</svg>
+
+  <svg class="premium-wave absolute bottom-[-5rem] left-0 h-72 w-[160%] opacity-70" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+    <path fill="#2179B6" fill-opacity="0.18" d="M0,192L60,181.3C120,171,240,149,360,160C480,171,600,213,720,208C840,203,960,149,1080,128C1200,107,1320,117,1380,122.7L1440,128L1440,320L0,320Z"></path>
+    <path fill="#5A99C1" fill-opacity="0.22" d="M0,224L80,213.3C160,203,320,181,480,186.7C640,192,800,224,960,218.7C1120,213,1280,171,1360,149.3L1440,128L1440,320L0,320Z"></path>
+  </svg>
 
   <div class="mx-auto grid min-h-[calc(100vh-9rem)] max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
     <div class="relative z-10">
-      <p class="mb-5 inline-flex rounded-full border border-[var(--color-ocean)]/20 bg-white/70 px-5 py-2 text-sm font-bold uppercase tracking-[0.28em] text-[var(--color-ocean)] shadow-sm backdrop-blur">
-        Caribe Mid
-      </p>
+      <div class="premium-eyebrow mb-6 inline-flex items-center gap-3 rounded-full border border-white/70 bg-white/60 px-5 py-2 shadow-sm backdrop-blur-xl">
+        <span class="h-2 w-2 rounded-full bg-[var(--color-coral)] shadow-[0_0_20px_rgba(240,164,114,0.8)]"></span>
+        <span class="text-sm font-black uppercase tracking-[0.28em] text-[var(--color-ocean)]">
+          Caribe Mid
+        </span>
+      </div>
 
-      <h1 class="max-w-4xl text-5xl font-black leading-[0.95] tracking-tight text-[var(--color-deep-blue)] md:text-7xl lg:text-8xl">
+      <h1 class="premium-title max-w-4xl text-5xl font-black leading-[0.92] tracking-tight text-[var(--color-deep-blue)] md:text-7xl lg:text-8xl">
         No reserves un servicio.
-        <span class="mt-2 block bg-gradient-to-r from-[var(--color-coral)] via-[var(--color-flamingo)] to-[var(--color-ocean)] bg-clip-text text-transparent">
-          Reserva un momento.
+        <span class="mt-3 block bg-gradient-to-r from-[var(--color-coral)] via-[var(--color-flamingo)] to-[var(--color-ocean)] bg-clip-text text-transparent">
+          Reserva una historia.
         </span>
       </h1>
 
-      <p class="mt-8 max-w-2xl text-lg leading-8 text-slate-700 md:text-xl">
-        Diseñamos experiencias en el Caribe que empiezan desde el primer clic:
-        momentos para celebrar, sorprender, reconectar y vivir algo que se recuerde.
+      <p class="premium-copy mt-8 max-w-2xl text-lg leading-8 text-slate-700 md:text-xl">
+        Diseñamos experiencias inmersivas inspiradas en el Caribe, Yucatán y Quintana Roo:
+        playa, cenotes, cultura maya, atardeceres y momentos que se sienten personales.
       </p>
 
-      <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+      <div class="premium-actions mt-10 flex flex-col gap-4 sm:flex-row">
         <a
           href="#reservar"
-          class="group rounded-full bg-[var(--color-coral)] px-8 py-4 text-center text-base font-bold text-white shadow-xl shadow-orange-900/10 transition hover:-translate-y-1 hover:shadow-2xl"
+          class="premium-button group relative overflow-hidden rounded-full bg-[var(--color-coral)] px-8 py-4 text-center text-base font-black text-white shadow-xl shadow-orange-900/10 transition hover:-translate-y-1"
         >
-          Reservar experiencia
-          <span class="inline-block transition group-hover:translate-x-1">→</span>
+          <span class="relative z-10">
+            Reservar experiencia
+            <span class="inline-block transition group-hover:translate-x-1">→</span>
+          </span>
         </a>
 
         <a
           href="#experiencias"
-          class="rounded-full border border-[var(--color-ocean)]/30 bg-white/70 px-8 py-4 text-center text-base font-bold text-[var(--color-ocean)] shadow-sm backdrop-blur transition hover:-translate-y-1 hover:bg-[var(--color-ocean)] hover:text-white"
+          class="rounded-full border border-[var(--color-ocean)]/25 bg-white/60 px-8 py-4 text-center text-base font-black text-[var(--color-ocean)] shadow-sm backdrop-blur-xl transition hover:-translate-y-1 hover:bg-[var(--color-ocean)] hover:text-white"
         >
           Explorar momentos
         </a>
       </div>
 
-      <div class="mt-12 grid max-w-2xl grid-cols-3 gap-4">
-        <div class="rounded-3xl bg-white/70 p-4 shadow-sm backdrop-blur">
+      <div class="premium-stats mt-12 grid max-w-2xl grid-cols-3 gap-4">
+        <div class="premium-stat-card">
           <p class="text-2xl font-black text-[var(--color-coral)]">01</p>
-          <p class="mt-1 text-sm font-semibold text-slate-600">Elige tu experiencia</p>
+          <p class="mt-1 text-sm font-semibold text-slate-600">Inspírate</p>
         </div>
 
-        <div class="rounded-3xl bg-white/70 p-4 shadow-sm backdrop-blur">
+        <div class="premium-stat-card">
           <p class="text-2xl font-black text-[var(--color-ocean)]">02</p>
-          <p class="mt-1 text-sm font-semibold text-slate-600">Solicita por WhatsApp</p>
+          <p class="mt-1 text-sm font-semibold text-slate-600">Conversemos</p>
         </div>
 
-        <div class="rounded-3xl bg-white/70 p-4 shadow-sm backdrop-blur">
+        <div class="premium-stat-card">
           <p class="text-2xl font-black text-[var(--color-flamingo)]">03</p>
-          <p class="mt-1 text-sm font-semibold text-slate-600">Confirma tu momento</p>
+          <p class="mt-1 text-sm font-semibold text-slate-600">Reserva</p>
         </div>
       </div>
     </div>
 
     <div class="relative mx-auto flex w-full max-w-xl items-center justify-center">
-      <div class="absolute h-[26rem] w-[26rem] rounded-full bg-gradient-to-br from-[var(--color-coral)]/30 via-white/40 to-[var(--color-ocean)]/30 blur-2xl"></div>
+      <div class="premium-card-light absolute h-[30rem] w-[30rem] rounded-full"></div>
 
-      <div class="relative w-full rounded-[2.5rem] border border-white/70 bg-white/65 p-6 shadow-2xl shadow-sky-950/10 backdrop-blur-xl">
-        <div class="rounded-[2rem] bg-gradient-to-br from-[var(--color-ocean)] via-[var(--color-sky)] to-[var(--color-coral)] p-1">
-          <div class="overflow-hidden rounded-[1.75rem] border border-white/70 bg-white/90 p-4 shadow-sm">
-            <img
-              src={`${baseUrl}images/logo/logo-caribemid.png`}
-              alt="Caribe Mid Viajes & planner"
-              class="mx-auto w-full max-w-md object-contain"
-              width="640"
-              height="213"
-            />
-          </div>
+      <div class="premium-showcase relative w-full rounded-[2.75rem] border border-white/70 bg-white/55 p-5 shadow-2xl shadow-sky-950/10 backdrop-blur-2xl">
+        <div class="relative overflow-hidden rounded-[2.25rem] border border-white/70 bg-white/80 p-8">
+          <div class="absolute right-[-6rem] top-[-6rem] h-56 w-56 rounded-full bg-[var(--color-coral)]/20 blur-3xl"></div>
+          <div class="absolute bottom-[-6rem] left-[-6rem] h-56 w-56 rounded-full bg-[var(--color-ocean)]/20 blur-3xl"></div>
 
-            <div class="mt-8 rounded-3xl bg-[var(--color-cream)] p-5">
-              <p class="text-sm font-bold uppercase tracking-[0.25em] text-[var(--color-ocean)]">
-                Experiencia destacada
-              </p>
+          <img
+            src={`${baseUrl}images/logo/logo-caribemid-large.webp`}
+            alt="Caribe Mid Viajes & planner"
+            class="premium-logo relative z-10 mx-auto w-full max-w-md object-contain"
+            width="640"
+            height="213"
+          />
 
-              <h2 class="mt-3 text-3xl font-black text-[var(--color-deep-blue)]">
-                Tu plan empieza aquí
-              </h2>
+          <div class="relative z-10 mt-8 rounded-[1.75rem] border border-white/80 bg-[var(--color-cream)]/80 p-5 shadow-sm backdrop-blur-xl">
+            <p class="text-sm font-black uppercase tracking-[0.25em] text-[var(--color-ocean)]">
+              Experiencia destacada
+            </p>
 
-              <p class="mt-3 text-sm leading-6 text-slate-600">
-                Un recorrido visual, emocional y directo hacia la reservación.
-                Sin páginas aburridas. Sin pasos innecesarios.
-              </p>
+            <h2 class="mt-3 text-3xl font-black text-[var(--color-deep-blue)]">
+              Tu plan empieza antes del viaje
+            </h2>
 
-              <a
-                href="#reservar"
-                class="mt-6 inline-flex rounded-full bg-[var(--color-ocean)] px-6 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-[var(--color-wave)]"
-              >
-                Quiero reservar
-              </a>
-            </div>
+            <p class="mt-3 text-sm leading-6 text-slate-600">
+              Una experiencia visual que prepara al cliente para imaginar,
+              desear y reservar sin sentir que está llenando un formulario.
+            </p>
+
+            <a
+              href="#reservar"
+              class="mt-6 inline-flex rounded-full bg-[var(--color-ocean)] px-6 py-3 text-sm font-black text-white transition hover:-translate-y-0.5 hover:bg-[var(--color-wave)]"
+            >
+              Quiero reservar
+            </a>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/80 to-transparent"></div>
 </section>

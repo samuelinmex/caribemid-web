@@ -5,15 +5,17 @@ import HeroSection from "../components/sections/HeroSection.astro";
 import ExperiencesSection from "../components/sections/ExperiencesSection.astro";
 import ReservationSection from "../components/sections/ReservationSection.astro";
 import IntroExperience from "../components/sections/IntroExperience.astro";
+import CursorAura from "../components/ui/CursorAura.astro";
 ---
 
 <Layout>
+  <CursorAura />
+  <IntroExperience />
   <Header />
 
   <main class="min-h-screen bg-[var(--color-cream)] text-[var(--color-deep-blue)]">
     <HeroSection />
     <ExperiencesSection />
     <ReservationSection />
-    <IntroExperience />
   </main>
 </Layout>
