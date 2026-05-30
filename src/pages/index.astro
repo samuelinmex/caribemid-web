@@ -3,11 +3,11 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/layout/Header.astro";
 import HeroSection from "../components/sections/HeroSection.astro";
 import ExperiencesSection from "../components/sections/ExperiencesSection.astro";
+import ExperienceCarouselSection from "../components/sections/ExperienceCarouselSection.astro";
+import MomentsBentoSection from "../components/sections/MomentsBentoSection.astro";
 import ReservationSection from "../components/sections/ReservationSection.astro";
 import IntroExperience from "../components/sections/IntroExperience.astro";
 import CursorAura from "../components/ui/CursorAura.astro";
-import MomentsBentoSection from "../components/sections/MomentsBentoSection.astro";
-import ExperienceCarouselSection from "../components/sections/ExperienceCarouselSection.astro";
 ---
 
 <Layout>
@@ -17,8 +17,8 @@ import ExperienceCarouselSection from "../components/sections/ExperienceCarousel
 
   <main class="min-h-screen bg-[var(--color-cream)] text-[var(--color-deep-blue)]">
     <HeroSection />
-    <ExperienceCarouselSection />
     <ExperiencesSection />
+    <ExperienceCarouselSection />
     <MomentsBentoSection />
     <ReservationSection />
   </main>
