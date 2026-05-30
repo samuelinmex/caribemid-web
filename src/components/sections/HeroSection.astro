@@ -69,14 +69,15 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/")
 
       <div class="relative w-full rounded-[2.5rem] border border-white/70 bg-white/65 p-6 shadow-2xl shadow-sky-950/10 backdrop-blur-xl">
         <div class="rounded-[2rem] bg-gradient-to-br from-[var(--color-ocean)] via-[var(--color-sky)] to-[var(--color-coral)] p-1">
-          <div class="rounded-[1.8rem] bg-white/90 p-8">
+          <div class="overflow-hidden rounded-[1.75rem] border border-white/70 bg-white/90 p-4 shadow-sm">
             <img
-              src={`${baseUrl}images/logo/logo-caribemid-large.webp`}
+              src={`${baseUrl}images/logo/logo-caribemid.png`}
               alt="Caribe Mid Viajes & planner"
-              class="mx-auto w-full max-w-md"
+              class="mx-auto w-full max-w-md object-contain"
               width="640"
               height="213"
             />
+          </div>
 
             <div class="mt-8 rounded-3xl bg-[var(--color-cream)] p-5">
               <p class="text-sm font-bold uppercase tracking-[0.25em] text-[var(--color-ocean)]">
