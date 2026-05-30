@@ -1,0 +1,50 @@
+---
+const baseUrl = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+---
+
+<section class="intro-experience fixed inset-0 z-[999] flex items-center justify-center overflow-hidden bg-[var(--color-cream)]">
+  <div class="intro-gradient absolute inset-0"></div>
+
+  <div class="intro-sun absolute right-[12%] top-[12%] h-32 w-32 rounded-full bg-[var(--color-coral)]/80 shadow-2xl shadow-orange-300/40"></div>
+
+  <div class="intro-cenote intro-cenote-1 absolute left-[8%] top-[18%] h-40 w-40 rounded-full border border-white/50 bg-[var(--color-sky)]/25 blur-sm"></div>
+  <div class="intro-cenote intro-cenote-2 absolute bottom-[16%] right-[10%] h-56 w-56 rounded-full border border-white/60 bg-[var(--color-ocean)]/20 blur-sm"></div>
+
+  <div class="intro-palm absolute left-[7%] bottom-[16%] text-7xl">🌴</div>
+  <div class="intro-flamingo absolute right-[16%] bottom-[20%] text-7xl">🦩</div>
+  <div class="intro-shell absolute left-[18%] top-[58%] text-4xl">🐚</div>
+  <div class="intro-starfish absolute right-[28%] top-[58%] text-4xl">⭐</div>
+
+  <div class="intro-pyramid absolute bottom-[22%] left-1/2 h-36 w-44 -translate-x-1/2">
+    <div class="mx-auto h-6 w-12 bg-[var(--color-flamingo)]"></div>
+    <div class="mx-auto h-6 w-24 bg-[var(--color-flamingo)]"></div>
+    <div class="mx-auto h-6 w-36 bg-[var(--color-flamingo)]"></div>
+    <div class="mx-auto h-6 w-44 bg-[var(--color-flamingo)]"></div>
+    <div class="mx-auto mt-[-48px] h-12 w-10 bg-[var(--color-cream)]/80"></div>
+  </div>
+
+  <div class="relative z-10 flex flex-col items-center px-6 text-center">
+    <div class="intro-logo-card rounded-[2rem] border border-white/70 bg-white/70 p-6 shadow-2xl shadow-sky-900/10 backdrop-blur-xl">
+      <img
+        src={`${baseUrl}images/logo/logo-caribemid.png`}
+        alt="Caribe Mid Viajes & planner"
+        class="w-72 md:w-96"
+        width="640"
+        height="213"
+      />
+    </div>
+
+    <p class="intro-text mt-8 max-w-xl text-xl font-black tracking-tight text-[var(--color-deep-blue)] md:text-3xl">
+      Preparando tu próxima experiencia en el Caribe...
+    </p>
+
+    <div class="intro-loader mt-6 h-2 w-64 overflow-hidden rounded-full bg-white/70">
+      <div class="h-full w-1/2 rounded-full bg-gradient-to-r from-[var(--color-ocean)] via-[var(--color-coral)] to-[var(--color-flamingo)]"></div>
+    </div>
+  </div>
+
+  <div class="intro-wave intro-wave-1 absolute bottom-0 left-0 h-32 w-[200%] bg-[var(--color-ocean)]/80"></div>
+  <div class="intro-wave intro-wave-2 absolute bottom-[-2rem] left-0 h-32 w-[200%] bg-[var(--color-sky)]/80"></div>
+</section>
