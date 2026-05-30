@@ -1,0 +1,78 @@
+---
+const experiences = [
+  {
+    title: "Para sorprender",
+    description: "Momentos pensados para regalar una experiencia inesperada, especial y memorable.",
+    tag: "Detalle único",
+  },
+  {
+    title: "Para celebrar",
+    description: "Cumpleaños, aniversarios o fechas importantes convertidas en recuerdos frente al Caribe.",
+    tag: "Celebraciones",
+  },
+  {
+    title: "Para escapar",
+    description: "Planes para desconectarte de la rutina y reconectar con el mar, la calma y la aventura.",
+    tag: "Escapadas",
+  },
+  {
+    title: "Para reconectar",
+    description: "Experiencias íntimas para parejas, familias o grupos que quieren compartir algo distinto.",
+    tag: "Momentos juntos",
+  },
+];
+---
+
+<section id="experiencias" class="relative bg-white px-6 py-28">
+  <div class="mx-auto max-w-7xl">
+    <div class="max-w-3xl">
+      <p class="text-sm font-black uppercase tracking-[0.3em] text-[var(--color-ocean)]">
+        Elige por emoción
+      </p>
+
+      <h2 class="mt-4 text-4xl font-black tracking-tight text-[var(--color-deep-blue)] md:text-6xl">
+        No vendemos paquetes.
+        <span class="block text-[var(--color-coral)]">
+          Diseñamos momentos.
+        </span>
+      </h2>
+
+      <p class="mt-6 text-lg leading-8 text-slate-600">
+        La experiencia empieza eligiendo qué quieres sentir: sorprender,
+        celebrar, escapar o reconectar. Después nosotros ayudamos a convertirlo
+        en una reserva clara por WhatsApp.
+      </p>
+    </div>
+
+    <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      {experiences.map((experience, index) => (
+        <article class="group relative overflow-hidden rounded-[2rem] border border-slate-100 bg-[var(--color-cream)] p-6 shadow-sm transition hover:-translate-y-2 hover:shadow-xl">
+          <div class="absolute right-[-3rem] top-[-3rem] h-32 w-32 rounded-full bg-[var(--color-coral)]/20 transition group-hover:scale-150"></div>
+
+          <p class="relative text-sm font-bold uppercase tracking-[0.22em] text-[var(--color-ocean)]">
+            {experience.tag}
+          </p>
+
+          <p class="relative mt-8 text-5xl font-black text-[var(--color-coral)]/30">
+            0{index + 1}
+          </p>
+
+          <h3 class="relative mt-4 text-2xl font-black text-[var(--color-deep-blue)]">
+            {experience.title}
+          </h3>
+
+          <p class="relative mt-4 text-sm leading-6 text-slate-600">
+            {experience.description}
+          </p>
+
+          <a
+            href="#reservar"
+            class="relative mt-8 inline-flex text-sm font-black text-[var(--color-ocean)] transition group-hover:text-[var(--color-coral)]"
+          >
+            Quiero esta experiencia →
+          </a>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
