@@ -4,8 +4,8 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/")
   : `${import.meta.env.BASE_URL}/`;
 ---
 
-<section class="premium-hero relative min-h-screen overflow-hidden bg-[var(--color-cream)] px-6 pt-36">
-  <div class="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_var(--mouse-x,50%)_var(--mouse-y,50%),rgba(240,164,114,0.22),transparent_28%),linear-gradient(135deg,#fafaf8_0%,#f8eee8_45%,#edf7fb_100%)]"></div>
+<section class="premium-hero relative min-h-screen overflow-hidden bg-[var(--color-cream)] px-6 pb-20 pt-32">
+  <div class="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_var(--mouse-x,50%)_var(--mouse-y,50%),rgba(240,164,114,0.20),transparent_28%),linear-gradient(135deg,#fafaf8_0%,#f8eee8_45%,#edf7fb_100%)]"></div>
 
   <div class="premium-mesh absolute inset-0 -z-10"></div>
 
@@ -14,53 +14,36 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/")
   <div class="premium-orb premium-orb-3"></div>
 
   <svg
-  class="coast-lines absolute left-0 top-24 hidden h-[34rem] w-[34rem] opacity-25 lg:block"
-  viewBox="0 0 500 500"
-  fill="none"
-  aria-hidden="true"
->
-  <circle cx="190" cy="190" r="88" stroke="#2179B6" stroke-width="3" />
-  <circle cx="190" cy="190" r="54" stroke="#5A99C1" stroke-width="3" />
-  <path
-    d="M72 330C128 300 178 300 236 330C296 362 354 362 430 318"
-    stroke="#2179B6"
-    stroke-width="5"
-    stroke-linecap="round"
-  />
-  <path
-    d="M82 370C138 340 188 340 246 370C306 402 364 402 440 358"
-    stroke="#F0A472"
-    stroke-width="5"
-    stroke-linecap="round"
-  />
-  <path
-    d="M118 238C160 218 202 218 244 238C286 258 328 258 370 232"
-    stroke="#F0AEA3"
-    stroke-width="4"
-    stroke-linecap="round"
-  />
-  <path
-    d="M312 130C340 104 382 100 414 126C382 126 356 142 338 170"
-    stroke="#2179B6"
-    stroke-width="4"
-    stroke-linecap="round"
-  />
-  <path
-    d="M328 170C364 158 402 170 426 202C390 190 360 196 336 220"
-    stroke="#0B78AD"
-    stroke-width="4"
-    stroke-linecap="round"
-  />
-</svg>
-
-  <svg class="premium-wave absolute bottom-[-5rem] left-0 h-72 w-[160%] opacity-70" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
-    <path fill="#2179B6" fill-opacity="0.18" d="M0,192L60,181.3C120,171,240,149,360,160C480,171,600,213,720,208C840,203,960,149,1080,128C1200,107,1320,117,1380,122.7L1440,128L1440,320L0,320Z"></path>
-    <path fill="#5A99C1" fill-opacity="0.22" d="M0,224L80,213.3C160,203,320,181,480,186.7C640,192,800,224,960,218.7C1120,213,1280,171,1360,149.3L1440,128L1440,320L0,320Z"></path>
+    class="coast-lines absolute left-0 top-24 hidden h-[30rem] w-[30rem] opacity-20 lg:block"
+    viewBox="0 0 500 500"
+    fill="none"
+    aria-hidden="true"
+  >
+    <circle cx="190" cy="190" r="88" stroke="#2179B6" stroke-width="3" />
+    <circle cx="190" cy="190" r="54" stroke="#5A99C1" stroke-width="3" />
+    <path
+      d="M72 330C128 300 178 300 236 330C296 362 354 362 430 318"
+      stroke="#2179B6"
+      stroke-width="5"
+      stroke-linecap="round"
+    />
+    <path
+      d="M82 370C138 340 188 340 246 370C306 402 364 402 440 358"
+      stroke="#F0A472"
+      stroke-width="5"
+      stroke-linecap="round"
+    />
+    <path
+      d="M118 238C160 218 202 218 244 238C286 258 328 258 370 232"
+      stroke="#F0AEA3"
+      stroke-width="4"
+      stroke-linecap="round"
+    />
   </svg>
 
-  <div class="mx-auto grid min-h-[calc(100vh-9rem)] max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+  <div class="mx-auto grid min-h-[calc(100vh-8rem)] max-w-7xl items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
     <div class="relative z-10">
-      <div class="premium-eyebrow mb-6 inline-flex items-center gap-3 rounded-full border border-white/70 bg-white/60 px-5 py-2 shadow-sm backdrop-blur-xl">
+      <div class="premium-eyebrow mb-5 inline-flex items-center gap-3 rounded-full border border-white/70 bg-white/60 px-5 py-2 shadow-sm backdrop-blur-xl">
         <span class="h-2 w-2 rounded-full bg-[var(--color-coral)] shadow-[0_0_20px_rgba(240,164,114,0.8)]"></span>
         <span class="text-sm font-black uppercase tracking-[0.28em] text-[var(--color-ocean)]">
           Caribe Mid
@@ -68,93 +51,105 @@ const baseUrl = import.meta.env.BASE_URL.endsWith("/")
       </div>
 
       <h1 class="premium-title max-w-4xl text-5xl font-black leading-[0.92] tracking-tight text-[var(--color-deep-blue)] md:text-7xl lg:text-8xl">
-        No reserves un servicio.
+        Creamos experiencias
         <span class="mt-3 block bg-gradient-to-r from-[var(--color-coral)] via-[var(--color-flamingo)] to-[var(--color-ocean)] bg-clip-text text-transparent">
-          Reserva una historia.
+          únicas e irrepetibles.
         </span>
       </h1>
 
-      <p class="premium-copy mt-8 max-w-2xl text-lg leading-8 text-slate-700 md:text-xl">
-        Diseñamos experiencias inmersivas inspiradas en el Caribe, Yucatán y Quintana Roo:
-        playa, cenotes, cultura maya, atardeceres y momentos que se sienten personales.
+      <p class="premium-copy mt-7 max-w-2xl text-lg leading-8 text-slate-700 md:text-xl">
+        En Caribe Mid convertimos tus sueños en momentos inolvidables.
+        Nos encargamos de cada detalle con profesionalismo, sensibilidad
+        y pasión por crear experiencias que se viven una sola vez, pero
+        se recuerdan para siempre.
       </p>
 
-      <div class="premium-actions mt-10 flex flex-col gap-4 sm:flex-row">
+      <div class="premium-actions mt-9 flex flex-col gap-4 sm:flex-row">
         <a
           href="#reservar"
           class="premium-button group relative overflow-hidden rounded-full bg-[var(--color-coral)] px-8 py-4 text-center text-base font-black text-white shadow-xl shadow-orange-900/10 transition hover:-translate-y-1"
         >
           <span class="relative z-10">
-            Reservar experiencia
+            Reservar mi experiencia
             <span class="inline-block transition group-hover:translate-x-1">→</span>
           </span>
         </a>
 
         <a
-          href="#experiencias"
+          href="#momentos"
           class="rounded-full border border-[var(--color-ocean)]/25 bg-white/60 px-8 py-4 text-center text-base font-black text-[var(--color-ocean)] shadow-sm backdrop-blur-xl transition hover:-translate-y-1 hover:bg-[var(--color-ocean)] hover:text-white"
         >
-          Explorar momentos
+          Descubrir momentos
         </a>
       </div>
 
-      <div class="premium-stats mt-12 grid max-w-2xl grid-cols-3 gap-4">
+      <div class="premium-stats mt-9 grid max-w-2xl gap-3 sm:grid-cols-3">
         <div class="premium-stat-card">
-          <p class="text-2xl font-black text-[var(--color-coral)]">01</p>
-          <p class="mt-1 text-sm font-semibold text-slate-600">Inspírate</p>
+          <p class="text-xl font-black text-[var(--color-coral)]">01</p>
+          <p class="mt-1 text-sm font-semibold text-slate-600">Cuéntanos tu sueño</p>
         </div>
 
         <div class="premium-stat-card">
-          <p class="text-2xl font-black text-[var(--color-ocean)]">02</p>
-          <p class="mt-1 text-sm font-semibold text-slate-600">Conversemos</p>
+          <p class="text-xl font-black text-[var(--color-ocean)]">02</p>
+          <p class="mt-1 text-sm font-semibold text-slate-600">Diseñamos cada detalle</p>
         </div>
 
         <div class="premium-stat-card">
-          <p class="text-2xl font-black text-[var(--color-flamingo)]">03</p>
-          <p class="mt-1 text-sm font-semibold text-slate-600">Reserva</p>
+          <p class="text-xl font-black text-[var(--color-flamingo)]">03</p>
+          <p class="mt-1 text-sm font-semibold text-slate-600">Vive algo inolvidable</p>
         </div>
       </div>
     </div>
 
-    <div class="relative mx-auto flex w-full max-w-xl items-center justify-center">
-      <div class="premium-card-light absolute h-[30rem] w-[30rem] rounded-full"></div>
+    <div class="relative z-10 mx-auto flex w-full max-w-lg items-center justify-center lg:max-w-xl">
+      <div class="premium-card-light absolute h-[26rem] w-[26rem] rounded-full"></div>
 
-      <div class="premium-showcase relative w-full rounded-[2.75rem] border border-white/70 bg-white/55 p-5 shadow-2xl shadow-sky-950/10 backdrop-blur-2xl">
-        <div class="relative overflow-hidden rounded-[2.25rem] border border-white/70 bg-white/80 p-8">
+      <div class="premium-showcase relative w-full rounded-[2.5rem] border border-white/70 bg-white/55 p-4 shadow-2xl shadow-sky-950/10 backdrop-blur-2xl md:p-5">
+        <div class="relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/80 p-6 md:p-8">
           <div class="absolute right-[-6rem] top-[-6rem] h-56 w-56 rounded-full bg-[var(--color-coral)]/20 blur-3xl"></div>
           <div class="absolute bottom-[-6rem] left-[-6rem] h-56 w-56 rounded-full bg-[var(--color-ocean)]/20 blur-3xl"></div>
 
           <img
             src={`${baseUrl}images/logo/logo-caribemid.png`}
             alt="Caribe Mid Viajes & planner"
-            class="premium-logo relative z-10 mx-auto w-full max-w-md object-contain"
+            class="premium-logo relative z-10 mx-auto w-full max-w-sm object-contain md:max-w-md"
             width="640"
             height="213"
           />
 
-          <div class="relative z-10 mt-8 rounded-[1.75rem] border border-white/80 bg-[var(--color-cream)]/80 p-5 shadow-sm backdrop-blur-xl">
-            <p class="text-sm font-black uppercase tracking-[0.25em] text-[var(--color-ocean)]">
-              Experiencia destacada
+          <div class="relative z-10 mt-6 rounded-[1.5rem] border border-white/80 bg-[var(--color-cream)]/80 p-5 shadow-sm backdrop-blur-xl">
+            <p class="text-xs font-black uppercase tracking-[0.25em] text-[var(--color-ocean)]">
+              Experiencias a la medida
             </p>
 
-            <h2 class="mt-3 text-3xl font-black text-[var(--color-deep-blue)]">
-              Tu plan empieza antes del viaje
+            <h2 class="mt-3 text-2xl font-black leading-tight text-[var(--color-deep-blue)] md:text-3xl">
+              Nosotros cuidamos el último detalle
             </h2>
 
             <p class="mt-3 text-sm leading-6 text-slate-600">
-              Una experiencia visual que prepara al cliente para imaginar,
-              desear y reservar sin sentir que está llenando un formulario.
+              Tú imaginas el momento. Nosotros lo planeamos, lo cuidamos
+              y lo convertimos en una experiencia inolvidable.
             </p>
 
             <a
               href="#reservar"
-              class="mt-6 inline-flex rounded-full bg-[var(--color-ocean)] px-6 py-3 text-sm font-black text-white transition hover:-translate-y-0.5 hover:bg-[var(--color-wave)]"
+              class="mt-5 inline-flex rounded-full bg-[var(--color-ocean)] px-6 py-3 text-sm font-black text-white transition hover:-translate-y-0.5 hover:bg-[var(--color-wave)]"
             >
-              Quiero reservar
+              Quiero vivirlo
             </a>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <svg
+    class="premium-wave pointer-events-none absolute bottom-[-5rem] left-0 h-64 w-[160%] opacity-70"
+    viewBox="0 0 1440 320"
+    preserveAspectRatio="none"
+    aria-hidden="true"
+  >
+    <path fill="#2179B6" fill-opacity="0.16" d="M0,192L60,181.3C120,171,240,149,360,160C480,171,600,213,720,208C840,203,960,149,1080,128C1200,107,1320,117,1380,122.7L1440,128L1440,320L0,320Z"></path>
+    <path fill="#5A99C1" fill-opacity="0.20" d="M0,224L80,213.3C160,203,320,181,480,186.7C640,192,800,224,960,218.7C1120,213,1280,171,1360,149.3L1440,128L1440,320L0,320Z"></path>
+  </svg>
 </section>

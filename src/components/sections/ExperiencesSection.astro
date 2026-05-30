@@ -1,76 +1,112 @@
 ---
 const experiences = [
   {
-    title: "Para sorprender",
-    description: "Momentos pensados para regalar una experiencia inesperada, especial y memorable.",
-    tag: "Detalle único",
+    title: "Para cumplir un sueño",
+    description:
+      "Transformamos una idea especial en una experiencia real, cuidada y memorable.",
+    tag: "Sueños",
+    gradient: "from-[var(--color-coral)]/30 via-white/70 to-[var(--color-sand)]/70",
+    numberColor: "text-[var(--color-coral)]",
+    cta: "Diseñar mi sueño",
   },
   {
-    title: "Para celebrar",
-    description: "Cumpleaños, aniversarios o fechas importantes convertidas en recuerdos frente al Caribe.",
+    title: "Para celebrar la vida",
+    description:
+      "Cumpleaños, aniversarios, propuestas o fechas importantes convertidas en recuerdos inolvidables.",
     tag: "Celebraciones",
+    gradient: "from-[var(--color-flamingo)]/30 via-white/70 to-[var(--color-sand)]/70",
+    numberColor: "text-[var(--color-flamingo)]",
+    cta: "Planear celebración",
   },
   {
-    title: "Para escapar",
-    description: "Planes para desconectarte de la rutina y reconectar con el mar, la calma y la aventura.",
-    tag: "Escapadas",
+    title: "Para sorprender",
+    description:
+      "Experiencias pensadas para emocionar, impactar y regalar algo que no se repite.",
+    tag: "Sorpresas",
+    gradient: "from-[var(--color-ocean)]/25 via-white/70 to-[var(--color-sky)]/25",
+    numberColor: "text-[var(--color-ocean)]",
+    cta: "Crear sorpresa",
   },
   {
     title: "Para reconectar",
-    description: "Experiencias íntimas para parejas, familias o grupos que quieren compartir algo distinto.",
-    tag: "Momentos juntos",
+    description:
+      "Momentos creados para parejas, familias o grupos que quieren vivir algo íntimo, especial y diferente.",
+    tag: "Conexión",
+    gradient: "from-[var(--color-sky)]/30 via-white/70 to-[var(--color-flamingo)]/20",
+    numberColor: "text-[var(--color-sky)]",
+    cta: "Vivir conexión",
   },
 ];
 ---
 
-<section id="experiencias" class="relative bg-white px-6 py-28">
-  <div class="mx-auto max-w-7xl">
-    <div class="max-w-3xl">
-      <p class="text-sm font-black uppercase tracking-[0.3em] text-[var(--color-ocean)]">
-        Elige por emoción
-      </p>
+<section id="experiencias" class="relative overflow-hidden bg-white px-6 py-28">
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute left-[-10rem] top-20 h-96 w-96 rounded-full bg-[var(--color-coral)]/15 blur-3xl"></div>
+    <div class="absolute right-[-12rem] bottom-10 h-[32rem] w-[32rem] rounded-full bg-[var(--color-ocean)]/15 blur-3xl"></div>
+  </div>
 
-      <h2 class="mt-4 text-4xl font-black tracking-tight text-[var(--color-deep-blue)] md:text-6xl">
-        No vendemos paquetes.
-        <span class="block text-[var(--color-coral)]">
-          Diseñamos momentos.
-        </span>
-      </h2>
+  <div class="relative mx-auto max-w-7xl">
+    <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+      <div>
+        <p class="text-sm font-black uppercase tracking-[0.3em] text-[var(--color-ocean)]">
+          Experiencias con propósito
+        </p>
 
-      <p class="mt-6 text-lg leading-8 text-slate-600">
-        La experiencia empieza eligiendo qué quieres sentir: sorprender,
-        celebrar, escapar o reconectar. Después nosotros ayudamos a convertirlo
-        en una reserva clara por WhatsApp.
-      </p>
+        <h2 class="mt-4 text-4xl font-black leading-tight tracking-tight text-[var(--color-deep-blue)] md:text-6xl">
+          Cada cliente tiene un sueño.
+          <span class="block bg-gradient-to-r from-[var(--color-coral)] to-[var(--color-ocean)] bg-clip-text text-transparent">
+            Nosotros lo convertimos en experiencia.
+          </span>
+        </h2>
+      </div>
+
+      <div class="rounded-[2rem] border border-slate-100 bg-[var(--color-cream)]/70 p-6 shadow-sm backdrop-blur-xl">
+        <p class="text-lg leading-8 text-slate-600">
+          No creemos en planes genéricos. Creamos momentos únicos e irrepetibles,
+          pensados alrededor de lo que quieres sentir, celebrar y recordar.
+          Nuestro trabajo es encargarnos del último detalle para que tú solo vivas
+          una experiencia inolvidable.
+        </p>
+      </div>
     </div>
 
-    <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+    <div class="mt-14 grid gap-6 md:grid-cols-2">
       {experiences.map((experience, index) => (
-        <article class="group relative overflow-hidden rounded-[2rem] border border-slate-100 bg-[var(--color-cream)] p-6 shadow-sm transition hover:-translate-y-2 hover:shadow-xl">
-          <div class="absolute right-[-3rem] top-[-3rem] h-32 w-32 rounded-full bg-[var(--color-coral)]/20 transition group-hover:scale-150"></div>
+        <article
+          class={`experience-card group relative min-h-[20rem] overflow-hidden rounded-[2.25rem] border border-white/80 bg-gradient-to-br ${experience.gradient} p-7 shadow-xl shadow-sky-950/5 backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:shadow-2xl`}
+        >
+          <div class="absolute right-[-5rem] top-[-5rem] h-56 w-56 rounded-full bg-white/50 blur-2xl transition duration-700 group-hover:scale-125"></div>
+          <div class="absolute bottom-[-6rem] left-[-4rem] h-52 w-52 rounded-full bg-[var(--color-ocean)]/10 blur-2xl transition duration-700 group-hover:scale-125"></div>
 
-          <p class="relative text-sm font-bold uppercase tracking-[0.22em] text-[var(--color-ocean)]">
-            {experience.tag}
-          </p>
+          <div class="relative z-10 flex h-full flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-4">
+                <span class="rounded-full border border-white/70 bg-white/65 px-4 py-2 text-xs font-black uppercase tracking-[0.22em] text-[var(--color-ocean)] shadow-sm backdrop-blur">
+                  {experience.tag}
+                </span>
 
-          <p class="relative mt-8 text-5xl font-black text-[var(--color-coral)]/30">
-            0{index + 1}
-          </p>
+                <span class={`text-5xl font-black ${experience.numberColor}/40`}>
+                  0{index + 1}
+                </span>
+              </div>
 
-          <h3 class="relative mt-4 text-2xl font-black text-[var(--color-deep-blue)]">
-            {experience.title}
-          </h3>
+              <h3 class="mt-10 max-w-md text-3xl font-black leading-tight text-[var(--color-deep-blue)] md:text-4xl">
+                {experience.title}
+              </h3>
 
-          <p class="relative mt-4 text-sm leading-6 text-slate-600">
-            {experience.description}
-          </p>
+              <p class="mt-5 max-w-xl text-base leading-7 text-slate-650 text-slate-600">
+                {experience.description}
+              </p>
+            </div>
 
-          <a
-            href="#reservar"
-            class="relative mt-8 inline-flex text-sm font-black text-[var(--color-ocean)] transition group-hover:text-[var(--color-coral)]"
-          >
-            Quiero esta experiencia →
-          </a>
+            <a
+              href="#reservar"
+              class="mt-8 inline-flex w-fit items-center rounded-full bg-white/75 px-6 py-3 text-sm font-black text-[var(--color-ocean)] shadow-sm backdrop-blur transition group-hover:bg-[var(--color-deep-blue)] group-hover:text-white"
+            >
+              {experience.cta}
+              <span class="ml-2 transition group-hover:translate-x-1">→</span>
+            </a>
+          </div>
         </article>
       ))}
     </div>
