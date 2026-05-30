@@ -1,0 +1,245 @@
+---
+const baseUrl = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
+const slides = [
+  {
+    image: `${baseUrl}images/experiences/experiencia-01.webp`,
+    eyebrow: "Experiencias únicas",
+    title: "Momentos diseñados para quedarse contigo",
+    description:
+      "Creamos experiencias cuidadas hasta el último detalle para que cada instante se sienta personal, especial e irrepetible.",
+  },
+  {
+    image: `${baseUrl}images/experiences/experiencia-02.webp`,
+    eyebrow: "Detalles memorables",
+    title: "Tú imaginas el sueño, nosotros lo hacemos realidad",
+    description:
+      "Nos encargamos de planear, coordinar y cuidar cada elemento para que solo tengas que vivir el momento.",
+  },
+  {
+    image: `${baseUrl}images/experiences/experiencia-03.webp`,
+    eyebrow: "Caribe con intención",
+    title: "Escenarios que elevan cada celebración",
+    description:
+      "El Caribe se convierte en el marco perfecto para celebrar, sorprender, reconectar y crear recuerdos inolvidables.",
+  },
+  {
+    image: `${baseUrl}images/experiences/experiencia-04.webp`,
+    eyebrow: "Hecho a la medida",
+    title: "Cada experiencia nace de una conversación",
+    description:
+      "Escuchamos lo que quieres vivir y lo convertimos en una propuesta única, cuidada y alineada con tu sueño.",
+  },
+];
+---
+
+<section id="galeria" class="experience-carousel-section relative overflow-hidden bg-white px-6 py-28">
+  <div class="pointer-events-none absolute inset-0">
+    <div class="absolute left-[-12rem] top-20 h-[32rem] w-[32rem] rounded-full bg-[var(--color-coral)]/15 blur-3xl"></div>
+    <div class="absolute right-[-14rem] bottom-10 h-[34rem] w-[34rem] rounded-full bg-[var(--color-ocean)]/15 blur-3xl"></div>
+    <div class="absolute left-[35%] top-[20%] h-96 w-96 rounded-full bg-[var(--color-flamingo)]/10 blur-3xl"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-7xl">
+    <div class="mx-auto max-w-4xl text-center">
+      <p class="text-sm font-black uppercase tracking-[0.34em] text-[var(--color-ocean)]">
+        Galería de inspiración
+      </p>
+
+      <h2 class="mt-5 text-4xl font-black leading-tight tracking-tight text-[var(--color-deep-blue)] md:text-6xl lg:text-7xl">
+        Una muestra de lo que
+        <span class="block bg-gradient-to-r from-[var(--color-coral)] via-[var(--color-flamingo)] to-[var(--color-ocean)] bg-clip-text text-transparent">
+          podemos crear para ti.
+        </span>
+      </h2>
+
+      <p class="mx-auto mt-7 max-w-3xl text-lg leading-8 text-slate-600">
+        Cada imagen representa una posibilidad: una celebración, una sorpresa,
+        una escapada o un momento que podemos diseñar contigo para hacerlo único,
+        irrepetible e inolvidable.
+      </p>
+    </div>
+
+    <div
+      class="experience-carousel mt-16 grid gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-stretch"
+      data-carousel
+    >
+      <div class="relative h-full overflow-hidden rounded-[2.75rem] border border-white/80 bg-[var(--color-cream)] p-3 shadow-2xl shadow-sky-950/10">
+        <div class="relative h-full min-h-[34rem] overflow-hidden rounded-[2.25rem] md:min-h-[38rem] lg:min-h-[40rem]">
+          {
+            slides.map((slide, index) => (
+              <img
+                src={slide.image}
+                alt={slide.title}
+                class={`carousel-image absolute inset-0 h-full w-full object-cover ${
+                  index === 0 ? "is-active" : ""
+                }`}
+                data-carousel-image
+                data-index={index}
+                loading={index === 0 ? "eager" : "lazy"}
+              />
+            ))
+          }
+
+          <div class="absolute inset-0 bg-gradient-to-t from-[var(--color-deep-blue)]/60 via-transparent to-transparent"></div>
+
+          <div class="absolute bottom-5 left-5 right-5 flex items-center justify-between gap-4">
+            <div class="rounded-full border border-white/35 bg-white/20 px-5 py-3 text-sm font-black uppercase tracking-[0.22em] text-white backdrop-blur-xl">
+              Caribe Mid
+            </div>
+
+            <div class="flex gap-3">
+              <button
+                type="button"
+                class="carousel-control"
+                data-carousel-prev
+                aria-label="Imagen anterior"
+              >
+                ←
+              </button>
+
+              <button
+                type="button"
+                class="carousel-control"
+                data-carousel-next
+                aria-label="Imagen siguiente"
+              >
+                →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative flex h-full min-h-[34rem] flex-col justify-between overflow-hidden rounded-[2.75rem] border border-white/80 bg-[var(--color-cream)]/80 p-6 shadow-xl shadow-sky-950/5 backdrop-blur-xl md:min-h-[38rem] md:p-8 lg:min-h-[40rem]">
+        <div class="absolute right-[-5rem] top-[-5rem] h-56 w-56 rounded-full bg-[var(--color-coral)]/25 blur-3xl"></div>
+        <div class="absolute bottom-[-6rem] left-[-6rem] h-64 w-64 rounded-full bg-[var(--color-ocean)]/15 blur-3xl"></div>
+
+        <div class="relative z-10 flex min-h-[23rem] flex-col">
+          <div class="relative min-h-[20rem]">
+            {
+              slides.map((slide, index) => (
+                <article
+                  class={`carousel-copy ${index === 0 ? "is-active" : ""}`}
+                  data-carousel-copy
+                  data-index={index}
+                >
+                  <p class="text-sm font-black uppercase tracking-[0.3em] text-[var(--color-ocean)]">
+                    {slide.eyebrow}
+                  </p>
+
+                  <h3 class="mt-5 text-4xl font-black leading-tight tracking-tight text-[var(--color-deep-blue)] md:text-5xl">
+                    {slide.title}
+                  </h3>
+
+                  <p class="mt-5 text-lg leading-8 text-slate-600">
+                    {slide.description}
+                  </p>
+                </article>
+              ))
+            }
+          </div>
+
+          <a
+            href="#reservar"
+            class="mt-8 inline-flex w-fit rounded-full bg-[var(--color-coral)] px-8 py-4 text-base font-black text-white shadow-xl shadow-orange-900/10 transition hover:-translate-y-1"
+          >
+            Quiero una experiencia así →
+          </a>
+        </div>
+
+        <div class="relative z-10 mt-10 grid grid-cols-4 gap-3">
+          {
+            slides.map((slide, index) => (
+              <button
+                type="button"
+                class={`carousel-thumb ${index === 0 ? "is-active" : ""}`}
+                data-carousel-thumb
+                data-index={index}
+                aria-label={`Ver experiencia ${index + 1}`}
+              >
+                <img
+                  src={slide.image}
+                  alt=""
+                  class="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </button>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const carousel = document.querySelector("[data-carousel]");
+
+    if (carousel instanceof HTMLElement) {
+      const images = Array.from(carousel.querySelectorAll("[data-carousel-image]"));
+      const copies = Array.from(carousel.querySelectorAll("[data-carousel-copy]"));
+      const thumbs = Array.from(carousel.querySelectorAll("[data-carousel-thumb]"));
+      const prev = carousel.querySelector("[data-carousel-prev]");
+      const next = carousel.querySelector("[data-carousel-next]");
+
+      let currentIndex = 0;
+      let intervalId = null;
+
+      const setActiveSlide = (nextIndex) => {
+        currentIndex = (nextIndex + images.length) % images.length;
+
+        images.forEach((image, index) => {
+          image.classList.toggle("is-active", index === currentIndex);
+        });
+
+        copies.forEach((copy, index) => {
+          copy.classList.toggle("is-active", index === currentIndex);
+        });
+
+        thumbs.forEach((thumb, index) => {
+          thumb.classList.toggle("is-active", index === currentIndex);
+        });
+      };
+
+      const startAutoplay = () => {
+        stopAutoplay();
+
+        intervalId = window.setInterval(() => {
+          setActiveSlide(currentIndex + 1);
+        }, 4500);
+      };
+
+      const stopAutoplay = () => {
+        if (intervalId !== null) {
+          window.clearInterval(intervalId);
+          intervalId = null;
+        }
+      };
+
+      prev?.addEventListener("click", () => {
+        setActiveSlide(currentIndex - 1);
+        startAutoplay();
+      });
+
+      next?.addEventListener("click", () => {
+        setActiveSlide(currentIndex + 1);
+        startAutoplay();
+      });
+
+      thumbs.forEach((thumb) => {
+        thumb.addEventListener("click", () => {
+          const index = Number(thumb.getAttribute("data-index"));
+          setActiveSlide(index);
+          startAutoplay();
+        });
+      });
+
+      carousel.addEventListener("mouseenter", stopAutoplay);
+      carousel.addEventListener("mouseleave", startAutoplay);
+
+      startAutoplay();
+    }
+  </script>
+</section>
